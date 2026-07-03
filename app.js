@@ -152,11 +152,13 @@ const firebaseConfig = {
     }
     }
     
-    // Rövanş
+    // ✅ Rövanş (HATA FIX)
+    document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("rematch").onclick = () => {
     db.ref("rooms/" + roomId).update({
     board: ["","","","","","","","",""],
     turn: "X"
     });
     };
+    });
     
