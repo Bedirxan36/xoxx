@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>XOX Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h1>XOX Online</h1>
+  <input type="text" id="username" placeholder="İsmini gir">
+  <button onclick="createGame()">Oda Oluştur</button>
+</div>
+
+<div id="game" class="hidden">
+  <h2 id="roomId"></h2>
+  <div id="board"></div>
+  <p id="status"></p>
+  <button id="rematch" class="hidden">Rövanş</button>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
