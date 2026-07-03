@@ -19,9 +19,10 @@ const firebaseConfig = {
   
   // URL'den oda var mı kontrol et
   const params = new URLSearchParams(window.location.search);
+
   if (params.get("room")) {
     roomId = params.get("room");
-    player = "O"; // katılan oyuncu O olur
+    player = "O";
     startGame();
   }
   
@@ -46,7 +47,7 @@ const firebaseConfig = {
     document.getElementById("game").classList.remove("hidden");
   
     document.getElementById("roomId").innerText =
-      "Link: " + window.location.origin + "?room=" + roomId;
+    "Link: " + window.location.origin + window.location.pathname + "?room=" + roomId;
   
     renderBoard();
   
